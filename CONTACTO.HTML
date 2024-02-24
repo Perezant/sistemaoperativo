@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Información de Contacto</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f2f2f2;
+    }
+
+    .container {
+      max-width: 800px; /* Aumenté el ancho del contenedor para incluir el mapa */
+      margin: 50px auto;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+
+    p {
+      margin-bottom: 10px;
+    }
+
+    .contact-info {
+      padding-left: 20px;
+      border-left: 2px solid #007bff;
+    }
+
+    #map {
+      width: 100%;
+      height: 400px; /* Establecí una altura para el mapa */
+      margin-top: 20px; /* Añadí un margen superior para separar el mapa del resto del contenido */
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h1>Información de Contacto</h1>
+  <div class="contact-info">
+    <p><strong>Nombre:</strong> ANTONIO PEREZ VAZQUEZ</p>
+    <p><strong>Email:</strong> ANTONIO.PEREZ70@UNACH.MX</p>
+    <p><strong>Teléfono:</strong> 961-7096670</p>
+    <p><strong>Dirección:</strong> COL,EL RECUEDO,CHIAPA DE CORZO CHIAPAS</p>
+  </div>
+  
+  <!-- Mapa de Google Maps -->
+  <div id="map"></div>
+</div>
+
+<!-- Script para cargar el mapa -->
+<script>
+  function initMap() {
+    var location = {lat: 40.712776, lng: -74.005974}; // Coordenadas de ejemplo (Nueva York)
+    var map = new google.maps.Map(document.getElementById('map'), {
+      zoom: 15,
+      center: location
+    });
+    var marker = new google.maps.Marker({
+      position: location,
+      map: map
+    });
+  }
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=TU_API_KEY&callback=initMap" async defer></script>
+<!-- Reemplaza 'TU_API_KEY' con tu propia clave de API de Google Maps -->
+</body>
+</html>
+

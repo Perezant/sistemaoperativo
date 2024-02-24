@@ -1,0 +1,12 @@
+/* styles.css */
+body {
+  padding-top: 70px; /* Para evitar que la barra de navegación solape el contenido */
+}
+
+h1 {
+  color: #333;
+}
+
+p {
+  color: #666;
+}
